@@ -9,7 +9,7 @@ fn print_buzz() {
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let nbr: i32 = args[1].parse().unwrap();
+    let nbr: i32 = args.get(1).unwrap().parse().unwrap();
 
     if nbr % 3 == 0 {
         print_fizz();
